@@ -7,6 +7,9 @@
   --text-color: #F1B2CE;
   --subtitle-color: #000028;
   --title-color: #DB00FF;
+  --text-title-color:#ff0070;
+  --hover-color: #ff007066;
   --font: 'IBM Plex mono', sans-serif;
   --back-image: url(..//images/cover-image-dark.png);
+  --rec-op: 1;
 }
