@@ -15,6 +15,9 @@
   --title-color: #DB00FF;
   --font: 'IBM Plex mono', sans-serif;
   --back-image: url(..//images/cover-image-dark.png);
+  --rec-op:1;
+  --text-title-color:#ff0070;
+  --hovercolor: #ff007066;
 }
 /* 
 @media (prefers-color-scheme: dark) {
