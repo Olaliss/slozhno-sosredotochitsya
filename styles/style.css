@@ -8,6 +8,9 @@ button {
   border: none;
   border-radius: none;
   background-color: transparent;
+  font-family: var(--font, sans-serif);
+  font-size: 18px;
+  padding: 2px 13px;
 }
 
 button:hover {
@@ -15,6 +18,7 @@ button:hover {
 }
 
 button:focus {
+  outline: none;
   border-bottom: 1px solid var(--text-title-color);
 }
 
@@ -27,9 +31,11 @@ button:disabled {
   background-image: var(--back-image);
   background-repeat: no-repeat;
   background-position: center bottom;
-  background-size: 100vw 100vh;
+  
+  background-size: cover;
   height: 100vh;
-  min-height: 668px;
+  min-height: 768px;
+  
 }
 
 .header__theme-menu {
@@ -45,13 +51,14 @@ button:disabled {
   justify-content: center;
   height: fit-content;
   margin: 0;
-  gap: 36px;
+  gap: 10px;
 }
 
 .header__theme-menu-button {
+  
   color: var(--text-title-color, #ff0070);
   text-align: center;
-  font-family: "IBM Plex Mono";
+  font-family: var(--font, sans-serif);
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -59,6 +66,7 @@ button:disabled {
 }
 
 .title {
+  justify-self: left;
   color: var(--title-color, #db00ff);
   text-shadow: 4px 4px 0px  #ff0070;
   font-family: var(--font, sans-serif);
@@ -66,8 +74,8 @@ button:disabled {
   font-style: normal;
   font-weight: 700;
   line-height: 82.5%; /* 129.525px */
-  padding-top: 275px;
-  padding-bottom: 115px;
+  align-self: end;
+  
 }
 
 .rec {
@@ -123,17 +131,6 @@ button:disabled {
   position: relative;
   filter: drop-shadow(0px 0px 4px #ff0070);
 }
-/* 
-.rec::after::before {
-  content: "";
-  position: absolute;
-  top: -10px;
-  left: 50%;
-  width: 1px;
-  height: 10px;
-  background-color: #ff0070;
-  transform: translateX(50%);
-} */
 
 .subtitle {
   color: var(--subtitle-color, #000028);
@@ -147,6 +144,10 @@ button:disabled {
   line-height: 23.4px;
 }
 
+.subtitle_padding {
+  padding-bottom: 10px;
+}
+
 .subtitle_light {
   font-weight: 400;
 }
@@ -157,7 +158,8 @@ button:disabled {
   align-self: end;
   justify-self: end;
   padding-right: 20px;
-  padding-bottom: 134px;
+  padding-bottom: 128px;
+  
 }
 
 .section {
@@ -181,7 +183,7 @@ button:disabled {
 }
 
 .text_title {
-  font-family: IBM Plex Mono;
+  font-family: var(--font, sans-serif);
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
@@ -192,7 +194,7 @@ button:disabled {
 }
 
 .text {
-  font-family: IBM Plex Mono;
+  font-family: var(--font, sans-serif);
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -204,6 +206,16 @@ button:disabled {
 .text_link{
   text-shadow: 2px 2px var(--accent-color);
   text-decoration: none;
+}
+
+.text_link:hover {
+  outline: none;
+  border-bottom: 1px solid var(--text-color);
+}
+
+.text_link:focus {
+  outline: none;
+  border: 1px solid var(--text-color);
 }
 
 .section_column {
@@ -291,13 +303,16 @@ button:disabled {
 @media (max-width: 768px) {
   .title {
     text-shadow: 4px 4px 0px #ff0070;
-    font-family: IBM Plex Mono;
+    font-family: var(--font, sans-serif);
     font-size: 120px;
     font-style: normal;
     font-weight: 700;
     line-height: 82.5%;
-    padding-top: 173px;
     padding-bottom: 162px;
+  }
+
+  .header {
+    min-height: 1024px;
   }
 
   .title_footer{
@@ -330,6 +345,17 @@ button:disabled {
 }
 
 @media (max-width: 375px) {
+  
+html,body {
+  overflow: hidden;
+  overflow-x: hidden;
+}
+
+  .page {
+    max-width: 375px;
+    
+  }
+
   .header::after {
     bottom: 10px;
     left: 10px;
@@ -340,6 +366,11 @@ button:disabled {
     right: 10px;
   }
   
+.header {
+  min-height: 668px;
+  
+}
+
   .rec{
     right: 0;
     top: 10px;
@@ -358,6 +389,7 @@ button:disabled {
 
   .subtitle_header {
     padding-right: 10px;
+    width: 355px;
   }
 
   .header__theme-menu {
@@ -372,6 +404,11 @@ button:disabled {
   .section {
     display: block;
     margin: 50px 10px;
+    
+  }
+
+  .text {
+    font-size: 18px;
   }
 
   .section_one {
@@ -404,4 +441,5 @@ button:disabled {
   .pic:not(:last-child) {
     padding-bottom: 10px;
   }
+
 }
