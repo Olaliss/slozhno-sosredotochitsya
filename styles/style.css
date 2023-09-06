@@ -298,6 +298,7 @@ button:disabled {
 .title_footer {
   text-align: center;
   justify-self: center;
+  align-self: unset;
 }
 
 @media (max-width: 768px) {
@@ -339,17 +340,12 @@ button:disabled {
     grid-template-columns: 1fr;
   }
 
-  .text_title{
-    width: 236px;
-  }
+  
 }
 
 @media (max-width: 375px) {
   
-html,body {
-  overflow: hidden;
-  overflow-x: hidden;
-}
+
 
   .page {
     max-width: 375px;
@@ -403,8 +399,16 @@ html,body {
 
   .section {
     display: block;
-    margin: 50px 10px;
+    margin: 10px 10px;
     
+  }
+
+  .section_first {
+    margin: 50px 10px 0px;
+  }
+
+  .section_fhird {
+    padding-top: 30px;
   }
 
   .text {
@@ -417,19 +421,17 @@ html,body {
   }
 
   .subtitle_section {
-    padding-right: 10px;
-    padding-left: 10px;
+   
     padding-bottom: 20px;
   }
 
   .text_title {
-    padding-left: 10px;
+    width: auto;
     padding-bottom: 20px;
   }
 
   .section_column {
-    padding-left: 10px;
-    padding-right: 10px;
+    gap: 0;
     padding-top: 0;
   }
 
@@ -440,6 +442,16 @@ html,body {
 
   .pic:not(:last-child) {
     padding-bottom: 10px;
+  }
+
+  .footer::before {
+    right: 10px;
+    top: 3px;
+  } 
+
+  .footer::after {
+    left: 10px;
+    bottom: 17px;
   }
 
 }
