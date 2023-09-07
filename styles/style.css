@@ -8,7 +8,7 @@ button {
   border: none;
   border-radius: none;
   background-color: transparent;
-  font-family: var(--font, sans-serif);
+  font-family: var(--font, Monospace);
   font-size: 18px;
   padding: 2px 13px;
 }
@@ -58,7 +58,7 @@ button:disabled {
   
   color: var(--text-title-color, #ff0070);
   text-align: center;
-  font-family: var(--font, sans-serif);
+  font-family: var(--font, Monospace);
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -69,7 +69,7 @@ button:disabled {
   justify-self: left;
   color: var(--title-color, #db00ff);
   text-shadow: 4px 4px 0px  #ff0070;
-  font-family: var(--font, sans-serif);
+  font-family: var(--font, Monospace);
   font-size: 157px;
   font-style: normal;
   font-weight: 700;
@@ -82,7 +82,7 @@ button:disabled {
   text-transform: uppercase;
   color: var(--accent-color, #ff0070);
   text-align: center;
-  font-family: var(--font, sans-serif);
+  font-family: var(--font, Monospace);
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -134,7 +134,7 @@ button:disabled {
 
 .subtitle {
   color: var(--subtitle-color, #000028);
-  font-family: var(--font, sans-serif);
+  font-family: var(--font, Monospace);
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
@@ -183,18 +183,18 @@ button:disabled {
 }
 
 .text_title {
-  font-family: var(--font, sans-serif);
+  font-family: var(--font, Monospace);
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
   line-height: 23.4px;
-  color: var(var(--text-title-color));
+  color: var(--text-title-color);
 
   width: 314px;
 }
 
 .text {
-  font-family: var(--font, sans-serif);
+  font-family: var(--font, Monospace);
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -298,18 +298,23 @@ button:disabled {
 .title_footer {
   text-align: center;
   justify-self: center;
-  align-self: unset;
+  align-self: center;
+  padding-bottom: 35px;
 }
 
 @media (max-width: 768px) {
   .title {
     text-shadow: 4px 4px 0px #ff0070;
-    font-family: var(--font, sans-serif);
+    font-family: var(--font, Monospace);
     font-size: 120px;
     font-style: normal;
     font-weight: 700;
     line-height: 82.5%;
-    padding-bottom: 162px;
+    padding-bottom: 65px;
+  }
+
+  .text_title {
+    width: 236px;
   }
 
   .header {
@@ -317,7 +322,8 @@ button:disabled {
   }
 
   .title_footer{
-    padding-top: 463px;
+    justify-self: center;
+    align-self: center;
   }
 
   .subtitle_header {
@@ -338,8 +344,21 @@ button:disabled {
 
   .section_column {
     grid-template-columns: 1fr;
+    gap: 0;
   }
 
+  .footer::before {
+    top: 1px;
+  }
+
+  .footer::after {
+    bottom: 39px;
+  }
+ 
+  .title_footer {
+    padding-bottom: 40px;
+    
+  }
   
 }
 
@@ -377,10 +396,6 @@ button:disabled {
     padding-top: 65px;
     padding-bottom: 55px;
     padding: 65px 10px 55px 10px;
-  }
-  
-  .title_footer{
-    padding-top: 286px;
   }
 
   .subtitle_header {
@@ -453,5 +468,10 @@ button:disabled {
     left: 10px;
     bottom: 17px;
   }
+
+.title_footer {
+  align-self: center;
+  padding-bottom: 85px;
+}
 
 }
