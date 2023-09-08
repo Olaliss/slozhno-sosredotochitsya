@@ -362,6 +362,19 @@ button:disabled {
   
 }
 
+
+@media (max-width: 460px){
+  .text_title{
+    width: auto;
+    padding-bottom: 20px;
+  }
+
+  .section_one {
+    display: block;
+    margin-top: -10px;
+  }
+}
+
 @media (max-width: 375px) {
   
 
